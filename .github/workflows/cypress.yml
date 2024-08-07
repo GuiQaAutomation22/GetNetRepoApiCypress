@@ -19,13 +19,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18' # Use a versão do Node.js que você preferir
+        node-version: '18' # Ou a versão que você preferir
 
     - name: Install dependencies
       run: |
         npm install
+        npx cypress install  # Instala o Cypress
 
     - name: Run Cypress tests
-      run: |
-        npx cypress run
+      run: npm run cypress:run
      
